@@ -358,6 +358,9 @@ body {
     <!-- 键盘提示 -->
     <div class="keyboard-hint" id="keyboardHint">← → 翻页 · F 全屏 · P 演讲者 · E 编辑文字 · M 移动位置 · Esc 概览</div>
     
+    <!-- 进入编辑模式悬浮按钮 -->
+    <button id="enterEditBtn" onclick="toggleEditMode()" style="position:fixed;bottom:24px;left:24px;z-index:950;background:#4ADE80;color:#2D3A2D;border:none;padding:10px 18px;border-radius:10px;font-size:13px;font-weight:bold;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.3);display:flex;align-items:center;gap:6px;">🖊 编辑</button>
+    
     <!-- Slides容器 -->
     <section class="slide ..." data-slide-type="cover" data-slide-index="0">
         <!-- 页面内容 -->
@@ -580,6 +583,8 @@ body {
     function toggleEditMode() {
         isEditMode = !isEditMode;
         document.body.classList.toggle('edit-mode', isEditMode);
+        const enterBtn = document.getElementById('enterEditBtn');
+        if (enterBtn) enterBtn.style.display = isEditMode ? 'none' : 'flex';
         const mi = document.getElementById('modeIndicator');
         mi.textContent = isEditMode ? 'EDIT MODE (Click text to edit)' : '';
         mi.className = 'mode-indicator visible edit';
