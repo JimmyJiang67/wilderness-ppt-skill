@@ -348,9 +348,9 @@ body {
     <div class="edit-toolbar" id="editToolbar">
         <button onclick="toggleContentEditable()">编辑文字(E)</button>
         <button onclick="toggleMoveMode()">移动位置(M)</button>
-        <button onclick="regenerateCurrentSlide()">重新生成</button>
         <button onclick="insertImage()">插入图片</button>
         <button onclick="insertVideo()">插入视频</button>
+        <button onclick="sendToAI()" style="background:#4ADE80;color:#2D3A2D;border-color:#4ADE80;font-weight:bold;">发给 AI 修改</button>
         <button onclick="deleteCurrentSlide()">删除页面</button>
         <button onclick="downloadHTML()">保存文件</button>
     </div>
@@ -721,10 +721,43 @@ body {
     window.toggleContentEditable = function() { toggleEditMode(); };
     window.toggleMoveMode = function() { toggleMoveMode(); };
 
-    window.regenerateCurrentSlide = function() {
+    window.sendToAI = function() {
         const s = slides[currentSlide];
-        const prompt = `请重新生成第${currentSlide+1}页（类型：${s.dataset.slideType}）：\n\n当前内容摘要：${s.innerText.substring(0,200)}\n\n请在此基础上改进：`;
-        navigator.clipboard.writeText(prompt).then(() => alert('指令已复制到剪贴板！\n\n请回到 Claude Code 粘贴指令，并补充你的修改要求。'));
+        const type = s.dataset.slideType || 'unknown';
+        const idx = currentSlide + 1;
+        
+        // 提取标题
+        const h1 = s.querySelector('h1');
+        const h2 = s.querySelector('h2');
+        const h3 = s.querySelector('h3');
+        const titleText = h2 ? h2.innerText.trim() : (h1 ? h1.innerText.trim() : '');
+        const subTitleText = h3 ? h3.innerText.trim() : '';
+        
+        // 提取所有可见文本（过滤空行）
+        const allText = Array.from(s.querySelectorAll('p, span, li, div.font-bold'))
+            .map(el => el.innerText.trim())
+            .filter(t => t.length > 0 && t !== titleText && t !== subTitleText);
+        const uniqueText = [...new Set(allText)].slice(0, 15);
+        
+        // 提取图片
+        const imgs = Array.from(s.querySelectorAll('img'))
+            .map(img => {
+                const label = img.closest('div')?.querySelector('span')?.innerText?.trim() || '';
+                return label ? `${label}: ${img.src}` : img.src;
+            });
+        
+        let prompt = `请修改第${idx}页（类型：${type}）\n`;
+        if (titleText) prompt += `标题：${titleText}\n`;
+        if (subTitleText) prompt += `副标题：${subTitleText}\n`;
+        if (uniqueText.length > 0) prompt += `\n页面内容：\n${uniqueText.map(t => '- ' + t).join('\n')}\n`;
+        if (imgs.length > 0) prompt += `\n图片资源：\n${imgs.map(i => '- ' + i).join('\n')}\n`;
+        prompt += `\n修改要求：`;
+        
+        navigator.clipboard.writeText(prompt).then(() => {
+            alert('当前页面信息已复制到剪贴板！\n\n请回到 Claude Code 粘贴发送。');
+        }).catch(() => {
+            alert('复制失败，请手动复制以下内容：\n\n' + prompt);
+        });
     };
 
     window.insertImage = function() {
