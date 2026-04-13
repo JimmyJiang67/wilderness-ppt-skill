@@ -55,6 +55,16 @@
 - CDN: Tailwind CSS, Google Fonts
 - 浏览器: 现代浏览器（支持CSS变量、scroll-snap、BroadcastChannel）
 
+## Git 发布工作流
+
+每次完成新版本迭代并通过验证后，必须执行以下步骤：
+
+1. **检查改动范围**：确认修改是否涉及多个文件（如 `render.js`、`references/html-template.md`、`editor.html`、`SKILL.md`、output 等）。如果只改了 output 里的单个 HTML，要回头检查**模板和渲染引擎**是否也需要同步更新，避免"源头没改、下次生成又出错"。
+2. **保持一致性**：确保 `render.js`、`references/html-template.md`、`editor.html` 和 output 文件中的引擎代码（如函数名、按钮事件、快捷键逻辑）完全一致。
+3. **提交并提醒**：所有相关文件修改完毕后，执行 `git add`、`git commit`、`git push origin main`，并**主动提醒用户**已在 GitHub 上推送了新版本。
+
+> 原则：**output 是产物，模板和渲染器才是源头**。产物和源头必须同步。
+
 ## Changelog
 
 - 2026-04-08: 初始版本，基于frontend-slides和codeck架构，适配邝野传媒品牌规范
