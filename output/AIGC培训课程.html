@@ -373,8 +373,8 @@
     function onDrag(e) { if (!draggedEl) return; e.preventDefault(); const dx = e.clientX - dragOffsetX; const dy = e.clientY - dragOffsetY; const currentTransform = draggedEl.style.transform || ''; const translateMatch = currentTransform.match(/translate(([^)]+))/); let baseX = 0, baseY = 0; if (translateMatch) { const parts = translateMatch[1].split(',').map(p => parseFloat(p) || 0); baseX = parts[0]; baseY = parts[1] || 0; } draggedEl.style.transform = 'translate(' + (baseX + dx) + 'px, ' + (baseY + dy) + 'px)'; dragOffsetX = e.clientX; dragOffsetY = e.clientY; }
     function endDrag(e) { if (draggedEl) { draggedEl.style.zIndex = ''; draggedEl.style.transition = ''; draggedEl = null; saveEdits(); } }
 
-    window.toggleContentEditable = function() { toggleEditMode(); };
-    window.toggleMoveMode = function() { toggleMoveMode(); };
+    window.toggleEditMode = toggleEditMode;
+    window.toggleMoveMode = toggleMoveMode;
 
     window.sendToAI = function() {
         const s = slides[currentSlide];

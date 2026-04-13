@@ -723,8 +723,8 @@ body {
     }
 
     // ==================== TOOLBAR FUNCTIONS ====================
-    window.toggleContentEditable = function() { toggleEditMode(); };
-    window.toggleMoveMode = function() { toggleMoveMode(); };
+    window.toggleEditMode = toggleEditMode;
+    window.toggleMoveMode = toggleMoveMode;
 
     window.sendToAI = function() {
         const s = slides[currentSlide];
