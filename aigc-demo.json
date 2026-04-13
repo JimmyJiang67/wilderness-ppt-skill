@@ -1,0 +1,191 @@
+{
+  "meta": {
+    "title": "AIGC培训课程 - 邝野传媒",
+    "brand": "WILDERNESS MEDIA"
+  },
+  "slides": [
+    {
+      "type": "cover",
+      "bg": "dark-green",
+      "title": ["AIGC", "培训课程"],
+      "subtitle": ["AI 破局", "全行业实战内参"],
+      "description": "懂品牌、懂社媒、懂 AI 的整合型内容团队",
+      "year": "2026"
+    },
+    {
+      "type": "contents",
+      "bg": "white",
+      "title": "Contents.",
+      "items": [
+        {"number": "1", "title": "AI Basics", "desc": "自我介绍 + AI基础通识"},
+        {"number": "2", "title": "Character", "desc": "人物生成 + 提示词工程"},
+        {"number": "3", "title": "Scene", "desc": "三视图 + 场景生成 + 融合"},
+        {"number": "4", "title": "Optimize", "desc": "优化调整 + 最终效果展示"},
+        {"number": "5", "title": "Lecture", "desc": "1小时公开课结构设计"},
+        {"number": "6", "title": "Takeaway", "desc": "核心金句 + 行动号召"}
+      ],
+      "year": "2026"
+    },
+    {
+      "type": "content-split",
+      "bg": "dark-green",
+      "badge": {"prefix": "PRO", "suffix": "JECT SHOWCASE"},
+      "title": "Character Generation",
+      "subtitle": "人物生成 · 拆分-组合思维：先定动作，再进场景",
+      "topElements": [
+        {
+          "type": "cards-row",
+          "cards": [
+            {"number": "01", "title": "身份", "sub": "年龄/职业/人设"},
+            {"number": "02", "title": "风格", "sub": "写实/商业/电影"},
+            {"number": "03", "title": "细节", "sub": "皮肤/光影/镜头"}
+          ]
+        },
+        {
+          "type": "prompt-bar",
+          "label": "PROMPT",
+          "steps": ["A.主体定义", "B.细节修饰", "C.艺术风格"]
+        }
+      ],
+      "images": [
+        {"src": "/Users/jimmyjiang/Downloads/培训课程对应的内容/images/培训课程对应的内容-jimeng-2026-04-07-9953-一个微笑着的年轻女子在咖啡馆里.png", "label": "普通提示词", "style": "normal"},
+        {"src": "/Users/jimmyjiang/Downloads/培训课程对应的内容/images/培训课程对应的内容-jimeng-2026-04-07-7579-一个微笑着的年轻外国女子在咖啡馆里.png", "label": "普通提示词", "style": "normal"},
+        {"src": "arrow", "label": "", "style": "arrow"},
+        {"src": "/Users/jimmyjiang/Downloads/培训课程对应的内容/images/培训课程对应的内容-Cinematic_portrait_of_202604071838.png", "label": "优化提示词", "style": "highlight"},
+        {"src": "/Users/jimmyjiang/Downloads/培训课程对应的内容/images/培训课程对应的内容-示例.png", "label": "优化提示词", "style": "highlight"},
+        {"src": "placeholder", "label": "+", "style": "placeholder"}
+      ],
+      "footer": {
+        "badge": "KEY INSIGHT",
+        "quote": "差距不是工具，是\"表达能力\"",
+        "subquote": "普通用户在\"写描述\" | 我们在\"定义可复用的人物资产\""
+      }
+    },
+    {
+      "type": "gallery",
+      "bg": "dark-green",
+      "badge": {"prefix": "PRO", "suffix": "JECT SHOWCASE"},
+      "title": "Before vs After",
+      "subtitle": "普通描述 vs 结构化提示词 — 效果对比",
+      "images": [
+        {"src": "/Users/jimmyjiang/Downloads/培训课程对应的内容/images/培训课程对应的内容-jimeng-2026-04-07-9953-一个微笑着的年轻女子在咖啡馆里.png", "label": "普通提示词", "style": "normal", "span": 1},
+        {"src": "/Users/jimmyjiang/Downloads/培训课程对应的内容/images/培训课程对应的内容-jimeng-2026-04-07-7579-一个微笑着的年轻外国女子在咖啡馆里.png", "label": "普通提示词", "style": "normal", "span": 1},
+        {"src": "/Users/jimmyjiang/Downloads/培训课程对应的内容/images/培训课程对应的内容-Cinematic_portrait_of_202604071838.png", "label": "优化提示词", "style": "highlight", "span": 1},
+        {"src": "/Users/jimmyjiang/Downloads/培训课程对应的内容/images/培训课程对应的内容-示例.png", "label": "优化提示词", "style": "highlight", "span": 1}
+      ],
+      "caption": {
+        "left": "普通: a young woman, smiling, in a cafe",
+        "right": "优化: 结构 + 镜头 + 质感"
+      }
+    },
+    {
+      "type": "content-split",
+      "bg": "dark-green",
+      "badge": {"prefix": "PRO", "suffix": "JECT SHOWCASE"},
+      "title": "Three-View",
+      "subtitle": "三视图生成 · 角色资产化",
+      "left": {
+        "description": "做项目最大的问题不是\"生成一张图\"，而是人物是否稳定。",
+        "list": [
+          {"number": "1", "text": "先生成三视图（正面 / 侧面 / 半侧）"},
+          {"number": "2", "text": "为动作生成、视频生成打好基础"},
+          {"number": "3", "text": "保证多场景应用中的一致性"}
+        ]
+      },
+      "rightCard": {
+        "badge": {"prefix": "CORE", "suffix": "INSIGHT"},
+        "mainText": ["1张图", "→", "1个角色\n资产"],
+        "divider": true,
+        "footer": "这是\"建模\"，不是\"出图\""
+      }
+    },
+    {
+      "type": "content-split",
+      "bg": "dark-green",
+      "badge": {"prefix": "PRO", "suffix": "JECT SHOWCASE"},
+      "title": "Scene Generation",
+      "subtitle": "场景生成 · 可控的世界搭建",
+      "left": {
+        "description": "很多人生成场景会遇到：不真实 / 很AI / 不可控\n原因是只写\"场景\"，没有写\"镜头 + 光\"",
+        "tags": ["空间", "光线", "镜头"]
+      },
+      "rightCard": {
+        "title": "三层结构",
+        "layers": [
+          {"number": "1. 空间", "text": "在哪里 — 酒店大堂 / 咖啡馆 / 办公室", "highlight": false},
+          {"number": "2. 光线", "text": "什么时候 — 自然光 / 暖光 / 电影感", "highlight": false},
+          {"number": "3. 镜头", "text": "怎么拍 — 广角 / 特写 / 俯拍", "highlight": true}
+        ]
+      }
+    },
+    {
+      "type": "case",
+      "bg": "dark-green",
+      "badge": {"prefix": "PRO", "suffix": "JECT SHOWCASE"},
+      "title": "Fusion",
+      "subtitle": "人+场景融合 · 从\"拼图\"到\"真实存在\"",
+      "cases": [
+        {
+          "title": "光源统一",
+          "before": {"label": "不统一", "text": "人物光不对", "sub": "室内vs室外光"},
+          "after": {"label": "IN HOUSE", "text": "统一光源方向", "sub": "自然真实"}
+        },
+        {
+          "title": "透视统一",
+          "before": {"label": "不统一", "text": "比例不对", "sub": "透视不一致"},
+          "after": {"label": "IN HOUSE", "text": "统一透视角度", "sub": "空间合理"}
+        },
+        {
+          "title": "质感统一",
+          "before": {"label": "不统一", "text": "质感割裂", "sub": "渲染风格混搭"},
+          "after": {"label": "IN HOUSE", "text": "统一质感风格", "sub": "高级感"}
+        }
+      ],
+      "quote": "高级感，本质是\"统一感\""
+    },
+    {
+      "type": "content-split",
+      "bg": "dark-green",
+      "badge": {"prefix": "PRO", "suffix": "JECT SHOWCASE"},
+      "title": "Optimize",
+      "subtitle": "优化与调整 · 迭代思维",
+      "left": {
+        "description": "很多人以为：输入 prompt → 出图 → 结束\n但在真实项目里是 80% 时间在优化",
+        "highlight": "我们不是在\"抽卡\"，是在\"控制结果\"",
+        "subHighlight": "必要时结合 Photoshop 进行精修"
+      },
+      "rightCard": {
+        "title": "优化维度",
+        "grid2x2": [
+          {"icon": "👤", "title": "人物", "sub": "脸 / 手 / 表情"},
+          {"icon": "🏙️", "title": "场景", "sub": "真实度"},
+          {"icon": "💡", "title": "光影", "sub": "统一性"},
+          {"icon": "🎨", "title": "品牌感", "sub": "风格化"}
+        ]
+      }
+    },
+    {
+      "type": "data",
+      "bg": "dark-green",
+      "badge": {"prefix": "PRO", "suffix": "JECT SHOWCASE"},
+      "title": "1 Hour Lecture",
+      "subtitle": "公开课结构 · AI 破局·全行业实战内参",
+      "watermark": "LECTURE",
+      "items": [
+        {"value": "10'", "title": "破冰与祛魅", "desc": "暴论开场 + 降维打击案例"},
+        {"value": "25'", "title": "全场景爆破", "desc": "四大行业案例 + 提示词思维"},
+        {"value": "15'", "title": "认知升维", "desc": "AI Agent + 工作流重构"},
+        {"value": "10'", "title": "引流转化", "desc": "留一手 + 福利诱钩", "highlight": true}
+      ]
+    },
+    {
+      "type": "quote",
+      "bg": "dark-green",
+      "title": "AI不会取代你",
+      "highlightTitle": "但会用AI的人会",
+      "description": "AIGC真正的价值，不是生成一张图\n而是建立一套\"可复用的内容生产能力\"",
+      "tags": ["一致性", "真实感", "可规模化"],
+      "footer": "邝野传媒 · Wilderness Media"
+    }
+  ]
+}
