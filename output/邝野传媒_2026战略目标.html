@@ -128,7 +128,7 @@
 <div class="page-indicator" id="pageIndicator">1 / 14</div>
 <div class="mode-indicator" id="modeIndicator"></div>
 <div class="edit-toolbar" id="editToolbar">
-    <button onclick="toggleContentEditable()">编辑文字(E)</button>
+    <button onclick="toggleEditMode()">编辑文字(E)</button>
     <button onclick="toggleMoveMode()">移动位置(M)</button>
     <button onclick="regenerateCurrentSlide()">重新生成</button>
     <button onclick="insertImage()">插入图片</button>
@@ -1187,9 +1187,7 @@
     }
 
     // ==================== TOOLBAR FUNCTIONS ====================
-    window.toggleContentEditable = function() {
-        toggleEditMode();
-    };
+
 
     window.toggleMoveMode = function() {
         toggleMoveMode();

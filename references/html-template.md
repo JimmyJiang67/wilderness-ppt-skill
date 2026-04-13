@@ -346,7 +346,7 @@ body {
     
     <!-- 编辑工具栏 -->
     <div class="edit-toolbar" id="editToolbar">
-        <button onclick="toggleContentEditable()">编辑文字(E)</button>
+        <button onclick="toggleEditMode()">编辑文字(E)</button>
         <button onclick="toggleMoveMode()">移动位置(M)</button>
         <button onclick="insertImage()">插入图片</button>
         <button onclick="insertVideo()">插入视频</button>
